@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exploring Space Missions</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config={
+                darkMode:'class',
+                theme:{
+                    extend:{
+                        fontFamily:{
+                            space:['Orbitron','sans-serif'],
+                            body:['Space Grotesk','sans-serif']
+                        }
+                    }
+                }
+            }
+        </script>
+        
+        
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+    </head>
+    <body class="dark bg-black text-white font-body">
+    <!--<body class="bg-white text-gray-900 dark:bg-black dark:text-white font-body">-->
+    
+        <!--div style="position:fixed; inset:0; background:red; z-index:9999;">
+        </div>-->
+
+        <div class ="space-bg hidden dark:block">
+
+            <div class ="nebula nebula-1"></div>
+            <!--<div class="stars"></div>-->
+            <div class="nebula nebula-2"></div>
+            <div class="nebula nebula-3"></div>
+            <div class="star-field" id="starField">
+                <span class="star" style="top:10%; left:20%; animation-duration:3s;"></span>
+                <span class="star" style="top:30%; left:70%; animation-duration:5s;"></span>
+                <span class="star" style="top:50%; left:40%; animation-duration:4s;"></span>
+                <span class="star" style="top:80%; left:60%; animation-duration:6s;"></span>
+
+            </div>
+            
+        </div>
+        <div class="relative z-10 p-10">
+
+<!--nav bar-->
+            <nav class="fixed top-0 w-full bg-black/70 backdrop-blur border-b border-gray-200 dark:border-gray-800 z-50">
+                <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+                    <h1 class="text-xl font-space text-white">Cosmos</h1>
+            
+                <!--<ul class="hidden md:flex gap-8 text-gray-300">
+                    <li class="hover:text-white cursor-pointer">Home</li>
+                    <li class="hover:text-white cursor-pointer">Missions</li>
+                    <li class="hover:text-white cursor-pointer">About</li>
+
+                </ul>-->
+                <button id="themeToggle" class="text-sm px-4 py-2 font-space border border-gray-800 transition">Toggle Theme</button>
+                </div>
+            </nav>
+            <div class="fixed inset-0 -z-10 bg-[radial-gradient(black_1px,transparent_1px)] dark:bg-[radial-gradient(white_1px,transparent_1px)]
+            [background-size:40px_40px] opacity-20"></div>
+
+           
+            <main class="px-6">
+                <!--hero section-->
+                <section class="h-screen flex flex-col justify-center items-center text-center px-6">
+                    <h1 class="text-4xl md:text-6xl font-space mb-6">Exploring Space Through Code
+
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-8">Reflecting my curiosity about space and technology through code.</p>
+                </section>
+
+                <section class="max-w-6xl mx-auto px-6 py-20">
+                    <h3 class="text-3xl font-space text-center mb-12">Featured Projects Showcase</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8 justify-items-center">
+                        <div class="bg-gray-400 dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+                            <h4 class="text-xl font-semibold mb-3">Satellite orbit tracker</h4>
+                            <p class="text-black dark:text-gray-400 text-sm">Visualizing satellite orbits in real-time using Matplotlib in python</p>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition" onclick="openModal('SatelliteTracker')">View Project
+                            </button>
+                        </div>
+                    
+                    </div>
+                </section>
+
+
+                <section class="text-center py-20">
+
+                    <h2 class="text-4xl font-space mb-4">Exploring Space Missions
+
+                    </h2>
+                    <p class="text-gray-400 max-w-xl mx-auto">Discover the wonders of space exploration through an interactive journey.</p>
+                </section>
+
+                <section class="text-center mb-12">
+                    <h2 class="text-4xl font-space mb-4">Featured Missions</h2>
+                    <p>Chandrayan , JWST ,Voyager and more...</p>
+                </section>
+
+                <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
+                    <!--chandrayan-3-->
+                    <article class="bg-gray-400 rounded-xl dark:bg-gray-800 shadow-lg p-6 hover:scale-105 transition">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Chandrayan-3</h3>
+                        <p class="text-black dark:text-gray-400">India's successful third lunar mission to explore the Moon's surface.</p>
+                        <!--learn more button-->
+                        <button onclick="openModal('Chandrayan-3')"
+                        class="text-white px-6 py-3 bg-indigo-600 rounded-xl hover:bg-indigo-500 transition">Learn More</button>
+                    </article>
+
+                    <!--jwst-->
+                    <article class="bg-gray-400 dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">James Webb Space Telescope (JWST)</h3>
+                        <p class="text-black dark:text-gray-400">The most powerful space telescope ever built, observing the universe in infrared.</p>
+                        <!--learn more button-->
+                        <button onclick="openModal('JWST')"
+                        class="text-white px-6 py-3 bg-indigo-600 rounded-xl hover:bg-indigo-500 transition">Learn More</button>
+                    </article>
+
+                    <!--voyager-->
+                    <article class="bg-gray-400 dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:scale-105 transition">
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Voyager Missions</h3>
+                        <p class="text-black dark:text-gray-400">The twin spacecraft that have journeyed beyond our solar system, sending back invaluable data.</p>
+                        <!--learn more button-->
+                        <button onclick="openModal('Voyager')"
+                        class="text-white px-6 py-3 bg-indigo-600 rounded-xl hover:bg-indigo-500 transition">Learn More</button>
+                    </article>
+                </section>
+
+            </main>
+            
+
+            <!--Modal background-->
+
+            <div id="modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+                <div class="bg-slate-900 p-6 rounded-xl max-w-3xl max-h-[80vh] overflow-y-auto relative">
+                    <button onclick="closeModal()"
+                    class="absolute top-4 right-4 text-xl">X</button>
+
+                    <div id ="modalContent"></div>
+                </div>
+            
+                
+            </div>
+            
+
+
+            <!--footer-->
+            <footer class="text-center py-7 text-gray-500">
+                <p> ~2025 Stephellite 😊</p>
+            </footer>
+
+
+        </div>
+    <script src="script.js" defer></script>
+    </body>
+</html> 
