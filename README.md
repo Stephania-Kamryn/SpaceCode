@@ -32,9 +32,11 @@ https://github.com/Stephania-Kamryn/Satellite-orbit-tracker
 *Visual Effects & Animations
 *generated starfield using JavaScript
 *Nebula animation (Work In Progress)
+edit-fixed it
 
 The nebula blur-based background is currently under refinement.
 The implementation exists in the codebase and will be finalized in a future update.
+edit-fixed it
 
 This reflects my iterative development approach — building features progressively while ensuring code clarity.
 
@@ -53,9 +55,10 @@ Browser DevTools — for inspecting elements, debugging JavaScript, and testing 
 
 
 
-🧭 Future Improvements (Probably Post-Deadline)
+# Future Improvements (Probably Post-Deadline)
 
 Complete animated nebula background
+edit-fixed it
 
 Add Earth rotation / orbit animation
 
