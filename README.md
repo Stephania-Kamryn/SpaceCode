@@ -1,6 +1,6 @@
 # Name: Stephania Kamryn R
 # Roll No: 125EE0093
-# Topic: Cosmos-Exploring space through code
+# Topic: SpaceCode-Exploring space through code
 A personal space-themed portfolio showcasing my curiosity about space science, satellite motion, and astronomy, built using HTML, Tailwind CSS, and JavaScript, with interactive UI elements and mission deep-dives.
 
 # Features
